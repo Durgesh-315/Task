@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Ensures the body takes up the full height of the viewport */
+    flex-direction: column;  /* Aligns the boxes vertically */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;  /* Stacks the boxes vertically */
+    gap: 20px;  /* Adds space between each box */
+    align-items: center;  /* Centers the boxes horizontally */
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.box:hover {
+    background-color: #ccc;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+}
+
+.box.expanded {
+    width: 300px;
+    height: 300px;
+}
+
+.box.expanded .options {
+    display: block;
+}
+
+select {
+    margin: 5px;
+}
